@@ -1,0 +1,23 @@
+import java.util.Scanner;
+/********************
+Written By: Scott Hartley
+Description: This program allows you to take a user's input and it can show different outputs for it.
+Tags: Parcel Service, PrintF, Scanner,
+
+********************/
+public class Printf {
+
+		public static void main (String[] args){
+			string CustomerName; 
+			char A,B,C = 'x' ;
+			
+			// Scanner
+			Scanner keyboard = new Scanner (System.in);
+			
+			// Asking For Their Name
+			System.out.println("Enter your name ");
+			A = keyboard.nextDouble();
+			
+		}
+	
+}
