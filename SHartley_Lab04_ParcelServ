@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 //Shartley_Lab04_ParcelServ.java
 //09/27/2015
 //Scott Hartley
@@ -12,8 +13,6 @@ public class SHartley_Lab04_ParcelServ1 {
 	String Name;
 	char pricePackage;
 	int numDeliveries=0;
-	double a = 8.95;
-	double b = 12.95;
 	double c = 25.50;
 		
 	// Declare Scanner
@@ -64,7 +63,7 @@ public class SHartley_Lab04_ParcelServ1 {
 
 		case 'c':
 		case 'C':	
-			System.out.printf("Your total cost is $" + c  );
+			System.out.printf("Your total cost is $25.50");
 
 			keyboard.close();
 		
