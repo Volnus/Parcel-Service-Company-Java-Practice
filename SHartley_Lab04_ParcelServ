@@ -1,23 +1,75 @@
 import java.util.Scanner;
-/********************
-Written By: Scott Hartley
-Description: This program allows you to take a user's input and it can show different outputs for it.
-Tags: Parcel Service, PrintF, Scanner,
+import java.lang.Math;
 
-********************/
-public class Printf {
+//Shartley_Lab04_ParcelServ.java
+//09/27/2015
+//Scott Hartley
+//CH3 - CS1013 - Programming One
+//Lab04_ParcelServ
 
-		public static void main (String[] args){
-			string CustomerName; 
-			char A,B,C = 'x' ;
-			
-			// Scanner
-			Scanner keyboard = new Scanner (System.in);
-			
-			// Asking For Their Name
-			System.out.println("Enter your name ");
-			A = keyboard.nextDouble();
-			
-		}
+public class SHartley_Lab04_ParcelServ1 {
+	public static void main(String[] args) 
+	{
+	// Declare Strings
+	String Name;
+	char pricePackage;
+	int numDeliveries=0;
+	double a = 8.95;
+	double b = 12.95;
+	double c = 25.50;
+		
+	// Declare Scanner
+	Scanner keyboard = new Scanner (System.in);
 	
+	// Ask For The Persons's Name
+	System.out.println("Please input your name: ");
+	Name = keyboard.nextLine();
+	
+	// Out Package Prices
+	System.out.println ("The prices for services "
+			+ "are avaialble in three categories of packages: A, B, or C.\n");
+	System.out.printf ("\tSERVICE PACK A - For $8.95 a month, 8 deliveries may be made.\n"
+			+ "\tThe cost for each additional delivery will be $3.00.\n"
+			+ "\tSERVICE PACK B - For $12.95 a month, 15 delivieries may be made.\n"
+			+ "\tThe cost for each additional delivery will be $2.00.\n"
+			+ "\tSERVICE PACK C - For $25.50 a month, an unlimited number of delivieries may be made.");
+	
+	// Ask Which Price Package, They Would Like
+	System.out.println("\nPlease input the service package" + " you would like to buy? A, B, or C? ");
+		String input1 = keyboard.nextLine();
+		pricePackage = input1.charAt(0);
+		
+		// Ask How Many Deliveries They Are Going To Make
+		System.out.println("How many packages do you want to deliver?: ");
+		numDeliveries = keyboard.nextInt();
+		
+		// Output Name + Package + # Of Deliveries 
+		System.out.println ("" + Name + " is purchasing service pack, " +pricePackage+ " and making " +numDeliveries+ " deliveries.");
+		
+		// Output Final Cost
+		switch(pricePackage)
+		{
+		case 'a':
+		case 'A':
+			if (numDeliveries > 8)	
+				System.out.printf("Your total cost is $" + (8.95 + (3.00 * (numDeliveries - 8))));
+			else 
+				System.out.printf("Your total cost is $8.95");
+			break;
+			
+		case 'b':
+		case 'B':
+			if (numDeliveries > 15)
+				System.out.printf("Your total cost is $" + (12.95 + (2.00 * (numDeliveries-15)))  );
+			else
+				System.out.printf("Your total cost is $12.95");
+
+		case 'c':
+		case 'C':	
+			System.out.printf("Your total cost is $" + c  );
+
+			keyboard.close();
+		
+		}
+	}
 }
